@@ -10,7 +10,7 @@ Docker_Essentials/
 ├── README.md
 ├── scripts/
    ├── install_docker.sh
-   └── uninstall_docker.sh
+   └── restore_install_docker.sh
 ```
 
 + README.md: 이 저장소의 개요와 내용을 설명하는 파일입니다.
@@ -19,13 +19,8 @@ Docker_Essentials/
 
 + install_docker.sh: CentOS 기반 시스템에 Docker를 설치하고 사용자를 docker 그룹에 추가하는 스크립트입니다.
 
-+ uninstall_docker.sh: Docker와 관련된 모든 패키지와 설정 파일들을 제거하여 시스템을 초기 상태로 복원하는 스크립트입니다.
++ restore_install_docker.sh: Docker와 관련된 모든 패키지와 설정 파일들을 제거하여 시스템을 초기 상태로 복원하는 스크립트입니다.
 
-+ projects/: Docker를 활용한 미니 프로젝트 실습 결과물을 담고 있습니다.
-
-+ basic-nginx/: 간단한 HTML 파일을 담은 정적 웹사이트를 Nginx 컨테이너로 배포하는 실습 프로젝트입니다.
-
-+ docker-compose-web-db/: Docker Compose를 사용하여 웹 서버와 데이터베이스를 하나의 서비스로 묶어 관리하는 실습 프로젝트입니다.
 
 ## 🚀 시작하기
 ### 1. 저장소 복제
