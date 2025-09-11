@@ -9,14 +9,8 @@
 Docker_Essentials/
 ├── README.md
 ├── scripts/
-│   ├── install_docker.sh
-│   └── uninstall_docker.sh
-└── projects/
-    ├── basic-nginx/
-    │   ├── Dockerfile
-    │   └── index.html
-    └── docker-compose-web-db/
-        └── docker-compose.yml
+   ├── install_docker.sh
+   └── uninstall_docker.sh
 ```
 
 + README.md: 이 저장소의 개요와 내용을 설명하는 파일입니다.
