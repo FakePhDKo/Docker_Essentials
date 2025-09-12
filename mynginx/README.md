@@ -11,9 +11,11 @@ Docker 이미지 빌드 과정 및 레이어 개념
 컨테이너 실행 시 포트포워딩 설정
 
 ## 📂 디렉토리 구조
+```
 .
 ├── Dockerfile
 └── index.html
+```
 + Dockerfile: 커스텀 Docker 이미지를 빌드하기 위한 스크립트입니다.
 
 + index.html: 웹 서버가 제공할 간단한 HTML 파일입니다.
