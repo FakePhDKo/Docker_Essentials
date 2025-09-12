@@ -8,9 +8,12 @@
 ```
 Docker_Essentials/
 ├── README.md
-├── scripts/
-   ├── install_docker.sh
-   └── restore_install_docker.sh
+├── myscripts/
+|   ├── install_docker.sh
+|   └── restore_install_docker.sh
+├── mynginx/
+|   ├── Dockerfile
+|   └── index.html
 ```
 
 + README.md: 이 저장소의 개요와 내용을 설명하는 파일입니다.
@@ -20,6 +23,12 @@ Docker_Essentials/
 + install_docker.sh: CentOS 기반 시스템에 Docker를 설치하고 사용자를 docker 그룹에 추가하는 스크립트입니다.
 
 + restore_install_docker.sh: Docker와 관련된 모든 패키지와 설정 파일들을 제거하여 시스템을 초기 상태로 복원하는 스크립트입니다.
+
++ mynginx/: nginx 관련 이미지 빌드 및 동작을 확인하기 위한 파일들이 있습니다.
+
++ Dockerfile:  간단한 웹페이지를 직접 만들어 Nginx 컨테이너에 올리고, 이 과정을 자동화하는 Docker 파일
+
++ index.html: 간단한 웹페이지
 
 
 ## 🚀 시작하기
