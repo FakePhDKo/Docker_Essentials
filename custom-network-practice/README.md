@@ -73,3 +73,40 @@ Bash
 ```bash
 bash run_network_practice.sh
 ```
+
+실습결과 예시
+```bash
+[root@docker1 ~/mypra/custom-network-practice]# . run_network_practice.sh 
+>> 1단계: 기본 브리지 네트워크에서 컨테이너 간 통신 실패 확인
+>>> 기본 네트워크에서 alpine1-default, alpine2-default 컨테이너 실행 중...
+Unable to find image 'alpine:latest' locally
+latest: Pulling from library/alpine
+9824c27679d3: Pull complete 
+Digest: sha256:4bcff63911fcb4448bd4fdacec207030997caf25e9bea4045fa6c8c44de311d1
+Status: Downloaded newer image for alpine:latest
+3293bf5c4196c1946fc27793fd92a693ca05dd2dde7b3c844c600ec92d30b7db
+fb4e5a5758d290ea0c218aec9a6aac15bb5df27d5cf9c6484eee626a4d3f3fa4
+>>> 컨테이너가 시작되었습니다. 잠시 대기합니다...
+>>> alpine1-default에서 alpine2-default로 ping 시도 (실패 예상)
+ping: bad address 'alpine2-default'
+>>> [결과] 'bad address' 오류가 발생합니다. 컨테이너 이름을 인식하지 못합니다.
+확인하셨다면 Enter를 누르세요.
+
+>> 2단계: 사용자 정의 브리지 네트워크에서 컨테이너 간 통신 성공 확인
+>>> 'my-custom-network' 네트워크 생성 중...
+1a78fa99a68a33cee8353ef7e7a0b0202327224d204cda4bfd0c9e89fb4c0a9b
+ca4444c4a3725b97ad97bac2072ac38e641ba0df84b1ccc64cd241d19a517aaa
+26a0a7a3345ee25368304adebf7a8e75f5b0486d3a58a39d0e73c5d5bad7c0c2
+>>> 컨테이너가 시작되었습니다. 잠시 대기합니다...
+>>> alpine1-custom에서 alpine2-custom으로 ping 시도 (성공 예상)
+PING alpine2-custom (172.19.0.3): 56 data bytes
+64 bytes from 172.19.0.3: seq=0 ttl=64 time=0.111 ms
+64 bytes from 172.19.0.3: seq=1 ttl=64 time=0.076 ms
+64 bytes from 172.19.0.3: seq=2 ttl=64 time=0.077 ms
+
+--- alpine2-custom ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.076/0.088/0.111 ms
+>>> [결과] ping이 성공했습니다. 컨테이너 이름을 인식하고 통신합니다.
+>> 실습 완료: 이제 컨테이너와 네트워크를 삭제하고 실습을 마무리하세요.
+```
